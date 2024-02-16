@@ -19,10 +19,6 @@ async def upload_csv(file: UploadFile = File(...)):
             'datos_con_clusters': data.to_dict(orient='records')
         }
 
-        # Convertir el diccionario a formato JSON con indentación
-        resultado_json = json.dumps(resultado_dict, indent=2)
-
-        print(resultado_json)
-        return resultado_json
+        return resultado_dict
     except Exception as error:
         raise HTTPException(status_code=500, detail=str(error))
