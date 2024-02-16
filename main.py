@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File
 import pandas as pd
 import utils
-import json
 
 app = FastAPI()
 app.title = "K-Means Algorithm" 
