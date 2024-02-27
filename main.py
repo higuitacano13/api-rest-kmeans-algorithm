@@ -15,7 +15,7 @@ async def upload_csv(file: UploadFile = File(...)):
         # Crear un diccionario con la información
         resultado_dict = {
             'centroides': kmeans.cluster_centers_.tolist(),
-            'datos_con_clusters': data.to_dict(orient='records')
+            'Data con clúster': data.to_dict(orient='records')
         }
 
         return resultado_dict
